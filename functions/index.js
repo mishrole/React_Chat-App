@@ -4,11 +4,11 @@ const Filter = require('bad-words');
 const admin = require('firebase-admin');
 admin.initializeApp();
 
-const database = admin.firestore();
+const db = admin.firestore();
 
 exports.detectEvilUsers = functions.firestore
     .document('messages/{msgId}')
-    .onCreate(async function (doc, ctx) {
+    .onCreate(async (doc, ctx) => {
         const oFilter = new Filter();
         const { text, uid } = doc.data();
 
@@ -16,7 +16,7 @@ exports.detectEvilUsers = functions.firestore
             const cleaned = filter.clean(text);
             await doc.ref.update({text: `📢 I got BANNED for life for saying... ${cleaned} 📢`})
             
-            await database.collection('banned').doc(uid).set({});
+            await db.collection('banned').doc(uid).set({});
         }
     });
 
