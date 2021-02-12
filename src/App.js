@@ -9,13 +9,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 const config = {
-  apiKey: "AIzaSyBAnCS2rR2irw7v20WZLARRcIrFZANDylw",
-  authDomain: "mishrole-demo.firebaseapp.com",
-  projectId: "mishrole-demo",
-  storageBucket: "mishrole-demo.appspot.com",
-  messagingSenderId: "242263296216",
-  appId: "1:242263296216:web:2330c1cd112c721f02afad",
-  measurementId: "G-N9JNGR51CS"
+  apiKey: "AIzaSyCHcH4ApmSs_V4yYO68htOetcJePJFYK7w",
+  authDomain: "mishrole-demo2.firebaseapp.com",
+  projectId: "mishrole-demo2",
+  storageBucket: "mishrole-demo2.appspot.com",
+  messagingSenderId: "137693382039",
+  appId: "1:137693382039:web:0bcd3b7dceb902d5c230d2",
+  measurementId: "G-6GTX2NGD75"
 }
 
 if(!firebase.apps.length) {
